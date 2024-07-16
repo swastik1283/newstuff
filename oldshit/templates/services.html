@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SERVICES
+{% endblock title %}
+
+{% block body %}
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://img.freepik.com/premium-photo/amazing-crystal-clear-water-white-sand-beach-with-gentle-waves-beautiful-sunny-day-with-blue-sky-fluffy-white-clouds_1187703-30618.jpg" class="d-block w-100" alt="Slide Image">
+        </div>
+    </div>
+</div>
+
+<style>
+    .carousel-caption-overlay {
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        scroll-behavior:smooth;
+        animation  fadeInUp 5s;
+    }
+    @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px) translateX(-50%); /* Move up */
+        }
+        to {
+          opacity: 1;
+        }
+    }
+</style>
+<div class="carousel-caption-overlay  mb-3">
+    <h1 class="my-4 text-center"> BOOK YOUR JOURNEY  </h1>
+    <form method="post" action="/services">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="First Name" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="First Name" placeholder="First Name">
+      </div>
+      <div class="mb-3">
+        <label for="Last Name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="Last Name" placeholder="Last Name">
+      </div>
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Email" placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <select class="form-select" id="location" name="location">
+        <option selected>Choose your location</option>
+        <option value="1">Manipur</option>
+        <option value="2">Sonnmarg</option>
+        <option value="3">Goa</option>
+        <option value="4">Vietnam</option>
+      </select>
+    </div>
+<div classs="mb-4">
+    <label for "number" class="form-label">Phone Number</label>
+    <input type ="text" class="form-control" id="PhoneNumber" placeholder="Enter your phone number">
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+{% endblock body %}

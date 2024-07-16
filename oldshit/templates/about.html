@@ -1,0 +1,88 @@
+{%extends 'base.html'%}
+{%block title%}About Us {%endblock title%}
+
+{%block body%}
+<style>
+    .carousel-caption-overlay {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        scroll-behavior:smooth;
+        animation  fadeInUp 2s;
+    }
+    .carousel-caption-overlay-2 {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        scroll-behavior:smooth;
+        animation:fadeInUp 2s;
+    }
+
+    .carousel-caption-overlay-2 li {
+        opacity: 0;
+        animation: fadeInUp 2s forwards;
+    }
+    .carousel-caption-overlay-3 li {
+        opacity: 0;
+        animation: fadeInUp 4s forwards;
+    }
+    .carousel-caption-overlay-4 li {
+        opacity: 0;
+        animation:fadeInUp 6s forwards;
+    }
+    .carousel-caption-overlay-5 li {
+        opacity: 0;
+        animation:fadeInUp 8s forwards;
+    }
+    .carousel-caption-overlay-6 li {
+        opacity: 0;
+        animation: fadeInUp 11 forwards;
+    }
+   
+    @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px) translateX(-50%); /* Move up */
+        }
+        to {
+          opacity: 1;
+        }
+    }
+</style>
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+    </div>
+</div>
+    <div class="carousel-inner ">
+         <div class="carousel-item active">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRH2ISw9P7GqdzoFumfGBnXe_awyASkob8Xw&s"
+                    class="d-block w-100">
+                    <div class="carousel-caption-overlay">
+                        <h1>About Us</h1>
+                    </div>
+                        <div class="carousel-caption-overlay-2">
+                        <ul>
+                        <h4><li>Embark on your next adventure with Golden Hour Travel, your trusted partner in creating unforgettable journeys.</li></h4></ul>
+                        <div class="carousel-caption-overlay-3">
+                            <ul>
+                        <h4><li>Whether you're dreaming of sun-kissed beaches, exploring vibrant cities, or discovering hidden gems off the beaten path, Golden Hour Travel is here to make your travel dreams a reality.</li></h4></ul>
+                        <div class="carousel-caption-overlay-4">
+                            <ul>
+                        <h4><li>At Golden Hour Travel, we're not just about booking flights or hotels; we're about making your travel experience truly special. Our exceptional service, expertly curated itineraries, and unparalleled customer satisfaction make Golden Hour Travel a one-stop-shop for all your travel needs.</li></h4></ul>
+                            </ul>
+                        <div class="carousel-caption-overlay-5">
+                            <ul>
+                        <h4><li>Our expert team of travel enthusiasts is dedicated to curating personalized itineraries that cater to your unique interests and desires. From the moment you start planning until you return home, we're committed to providing exceptional service and ensuring every detail of your trip is meticulously taken care of.Discover a world of possibilities with Golden Hour Travel, where every journey is crafted with passion, expertise, and a touch of magic. Let's make your next adventure the best one yet.</li></h4></ul>
+                            </div>
+                </div>
+            </div>
+
+{%endblock body %}
